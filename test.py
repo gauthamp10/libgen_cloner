@@ -2,9 +2,10 @@ import requests
 import json
 import random
 import itertools
+import wget
 
 def get_book_data(id):
-    data=requests.get('http://libgen.io/json.php?ids='+str(id)+'&fields=*').json()
+    data=requests.get('http://libgen.io/json.php?ids='+str(1)+'&fields=*').json()
     print(data)
     return data
 
