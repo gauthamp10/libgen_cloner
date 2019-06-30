@@ -1376,8 +1376,8 @@ form textarea {
       background: url(images/play-button.png); }
     .live-camera .live-camera-cover img {
       display: block;
-      width: 100%;
-      height: auto;
+      width: 240px;
+      height: 383px;
       max-width: 100%;
       border-radius: 5px; }
   .live-camera .location {
