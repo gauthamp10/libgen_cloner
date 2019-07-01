@@ -21,19 +21,24 @@ print("-----Logged in------\n")
 ids=list()
 
 def get_book_data(ids):
-    headers = {'User-Agent': 'My User Agent 1.0','From': 'youremail@domain.com'  }
-    data=requests.get('http://libgen.io/json.php?ids='+str(ids)+'&fields=*',headers=headers).json()[0]
-    print("Book"+str(ids)+": ",data['title'])
-    write(db, user, data, ids,"Test_Write")
-    
+    try:
+        headers = {'User-Agent': 'My User Agent 1.0','From': 'youremail@domain.com'  }
+        data=requests.get('http://libgen.io/json.php?ids='+str(ids)+'&fields=*',headers=headers).json()[0]
+        print("Book"+str(ids)+": ",data['title'])
+        write(db, user, data, ids,"Book_Data")
+    except Exception as e:
+        print("Error: ",str(e))
+
 def generate_ids():
     for i  in range(1,999999):
         ids.append(i)
-    
+  
 generate_ids()
 
-
-p = Pool(20)
-p.map(get_book_data, ids)
-p.terminate()
-p.join()
+try:
+    p = Pool(30)
+    p.map(get_book_data, ids)
+    p.terminate()
+    p.join()
+except Exception as e:
+    print("Error: ".str(e))
