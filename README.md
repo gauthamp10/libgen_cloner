@@ -7,9 +7,13 @@ A yify for books
 ### Author
 
  **Gautham Prakash**
+ 
  **Chinmay Das**
+ 
  **Sooraj Ashok**
+ 
  **Akhil T R**
+ 
  **Akash S Panikar**
  
  My other projects:[github.com/gauthamp10](https://gauthamp10.github.io/)
