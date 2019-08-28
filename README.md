@@ -1,7 +1,7 @@
 # libegen_cloner
 A yify for books
 
-**See it in action** <a href="https://libgencloner.unaux.com/">Libgen Cloner</a>
+**See it in action** <a href="http://libgencloner.unaux.com/">Libgen Cloner</a>
 
 
 ### Author
